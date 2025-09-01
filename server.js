@@ -5,12 +5,13 @@ const connectDB = require('./config/db');
 
 const app = express();
 
+// Middleware to parse JSON
 app.use(express.json());
 
 // Connect DB
 connectDB();
 
-
+// Routes
 app.use('/', postRoutes);
 
 
